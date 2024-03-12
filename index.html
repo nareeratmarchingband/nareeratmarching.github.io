@@ -1,0 +1,123 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      
+      <title>ระบบการรับสมัครนักเรียน - โรงเรียนนารีรัตน์จังหวัดแพร่</title>
+      <base target="_top">
+      <link rel="icon" type="image/png" sizes="16x16" href="https://i.ibb.co/Jp0YCgw/logo.png"/>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link href='https://fonts.googleapis.com/css?family=Prompt' rel='stylesheet' type='text/css'>
+      <style type='text/css'>
+        body {
+            font-family: 'Prompt', sans-serif !important;
+        }
+    
+        ::placeholder {
+            color: peachpuff;
+            font-size: 14px;
+            text-align: left;
+        }
+    </style>
+      <script src="Code.gs"></script> <?!= include('JavaScript'); ?>  
+    </head>
+    <body>
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <form id="myForm" onsubmit="processForm(this); return false;">
+
+              <img src="https://i.ibb.co/6sxnWqY/banner.webp" width="100%" class="img-fluid" alt="Responsive image" s>
+              <div class="alert alert-primary" role="alert">
+                <center>
+                  <B>
+                    <font size=4>ระบบการรับสมัครนักเรียน "วงโยธวาทิต" ประจำปีการศึกษา 2567</font>
+                  </B>
+                </center>
+              </div>
+              <div class="alert alert-success" role="alert">
+                <h6 class="font-weight-bold">ระบบการรับสมัครนักเรียน "วงโยธวาทิต" โรงเรียนนารีรัตน์จังหวัดแพร่</h6>
+                <p>ให้นักเรียนกรอกข้อมูลบนหน้าเว็บไซต์ให้ถูกต้อง <br>  </p> 
+              </div>
+
+
+
+              <!--  ชื่อ สกุล   -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="first_name">ชื่อ</label>
+                  <label for="" style="color: red;">*</label>
+                  <input type="text" class="form-control" id="first_name" name="first_name" placeholder="ชื่อ">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="last_name">นามสกุล</label>
+                  <label for="" style="color: red;">*</label>
+                  <input type="text" class="form-control" id="last_name" name="last_name" placeholder="นามสกุล">
+                </div>
+              </div>
+
+              <!--  เพศ  -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="class">เพศ</label>
+                  <label for="" style="color: red;">*</label>
+                  <select id="gender" class="form-control" name="gender">
+                    <option selected>โปรดเลือกเพศ</option>
+                    <option>ชาย</option>
+                    <option>หญิง</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- ชื่อเล่น & เบอร์โทร-->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="phone">เบอร์โทร</label>
+                  <label for="" style="color: red;">*</label>
+                  <input type="tel" class="form-control" id="phone" maxlength="10" name="phone" placeholder="เช่น 096-xxx-xxxx">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="nickname">ชื่อเล่น</label>
+                  <label for="" style="color: red;">*</label>
+                  <input type="text" class="form-control" id="nickname" name="nickname" placeholder="ชื่อเล่น">
+                </div>
+              </div>
+
+              <!--  ระดับชั้น   -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="class">ระดับชั้น</label>
+                  <label for="" style="color: red;">*</label>
+                  <select id="class" class="form-control" name="class">
+                    <option selected>โปรดเลือกระดับชั้น</option>
+                    <option>มัธยมศึกษาปีที่ 1</option>
+                    <option>มัธยมศึกษาปีที่ 2</option>
+                    <option>มัธยมศึกษาปีที่ 3</option>
+                    <option>มัธยมศึกษาปีที่ 4</option>
+                    <option>มัธยมศึกษาปีที่ 5</option>
+                    <option>มัธยมศึกษาปีที่ 6</option>
+                  </select>
+                </div>
+              </div> 
+
+              <!--  แผนการเรียน   -->
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="planselect">แผนการเรียน</label>
+                  <label for="" style="color: red;">*</label>
+                  <select id="planselect" class="form-control" name="plan">
+                    <option selected>โปรดเลือกแผนการเรียน</option>
+                    <option>วงโยธวาทิต</option>
+                    <option>Color Guard</option>
+                  </select>
+                </div>
+              </div>
+              <!--  ปุ่มบันทึกข้อมูล   -->
+              <br>
+              <button type="submit" class="btn btn-primary btn-block">บันทึกข้อมูล</button>
+              <br>
+            </form>  <div id="output"></div>
+          </div>
+        </div>
+      </div>
+    </body>
+  </html>
